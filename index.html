@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+     <nav class="navbar">
+        <h2 class="logo">Portfolio</h2>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">Dashboard</a></li>
+                <li><a href="index3.html">Upload</a></li>
+            </ul>
+        </nav>
+
+</head>
+<style>
+    .about{
+    background:#026d1b;
+    padding:25px;
+    max-width:500px;
+    border-radius:10px;
+    color:white;
+    left:500px;
+    position: absolute;
+    font-style: italic;
+    bottom:300px;
+    }
+.card{
+    background:#026d1b;
+    padding:25px;
+    margin:25px auto;
+    border-radius:10px;
+    max-width:700px;
+    font-style: italic;
+    color: white;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    align-items: center;
+    left: 500px;
+    bottom: 100px;
+}
+
+.kard{
+    background:#026d1b;
+    padding:25px;
+    margin:25px auto;
+    border-radius:10px;
+    max-width:100px;
+    color: white;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    align-items: center;
+    left: 760px;
+    bottom: 165px;
+    font-style:italic;
+}
+
+.kard{
+  transition: transform 0.35s cubic-bezier(.2,.8,.2,1), background 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform, background;
+  cursor: pointer;
+}
+.looking:hover,
+.looking:focus,
+.looking:focus-visible{
+  background: #c41c1cdc;
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  outline: none;
+}
+.profile img{
+    width:240px;
+    border-radius:50%;
+    border:3px solid #000000;
+    position: absolute;
+    left: 200px;
+    top: 180px;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: green;
+  padding: 15px 40px;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li{
+    margin: 0 15px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: white;
+  font-weight: 500px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover{
+  color: black;
+}
+
+.nav-links{
+    position: relative;
+    left:1000px;
+    font-style: italic;
+}
+
+.logo{
+    position: absolute;
+    color: white;
+    left: 50px;
+    font-style: italic;
+}
+
+.skill{
+    background:#026d1b;
+    padding:25px;
+    margin:25px auto;
+    border-radius:10px;
+    max-width:500px;
+    width: 500px;
+    color: white;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    align-items: center;
+    left: 500px;
+    font-style: italic;
+    bottom: -300px;
+    }
+
+    .Project{
+    background:#026d1b;
+    padding:25px;
+    margin:25px auto;
+    border-radius:10px;
+    max-width:500px;
+    width: 500px;
+    color: white;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    align-items: center;
+    left: 500px;
+    font-style: italic;
+    bottom: -600px;
+    }
+
+    .logs{
+    position: absolute;
+     width:240px;
+    border-radius:10px;
+    left: 200px;
+    bottom:-290px;
+    }
+
+    .logs-pic{
+        border-radius:10px;
+    }
+
+    .Pro{
+     position: absolute;
+     width:240px;
+    border-radius:10px;
+    left: 200px;
+    bottom:-660px;
+    }
+    
+    .logs-pro{
+    border-radius:10px;
+    }
+
+.footer{
+    background-color: #026d1b;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    position: absolute;
+    bottom: -800px;
+    width: 96.3%;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects, .skills{
+    list-style: none;
+    padding: 0;
+}
+</style>
+<body style="background-color: rgb(255, 255, 255);">
+    <div class="profile">
+     <img src="image.png" alt="picture" class="profile-pic">
+    </div>
+    <div class="card">
+<p><strong>Name:</strong> Kevin Bryant A. Mesina</p>
+<p><strong>Student Number:</strong> 251101056</p>
+<p><strong>Course and Section:</strong> BSCS-1D</p>
+</div>
+
+<div class="about">
+<h2><strong>ABOUT ME</strong></h2>
+<p>Im kevin bryant A. Mesina,19 years old Student in cavite state university.I chose computer science because I want to pursue my dream.</p>
+</div>
+<glass-container>
+<div class="kard">
+ <p><strong>Student</strong></p>
+</div>
+</glass-container>
+
+<div class="logs">
+<img src="logos.jpg" alt="logo" class="logs-pic">
+</div>
+
+<div class="skill">
+<h2><strong>SKILLS</strong></h2>
+<ul class="skills">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Slight Javascript</li>
+</div>
+
+<div class="Pro">
+<img src="pro.png" alt="pro" class="logs-pro">
+</div>
+
+<div class="Project">
+<h2><strong>PROJECT</strong></h2>
+<ul class="projects">
+    <li>Project 1: Simple Calculator</li>
+    <li>Project 2: Personal Portfolio</li>
+</div>
+</body>
+<footer>
+  <div class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Contact Me</h3>
+        <p>Email:KevinBryantMesina@gmail.com
+</footer>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    .body{
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .top-bar {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .calculator {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .input {
+        padding: 10px;
+        font-size: 16px;
+    }
+    .button {
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        display: flexbox;
+    }
+    .dark-mode {
+        background-color: #333;
+        color: #f0f0f0;
+    }
+
+    .back {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 10px 15px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .back:hover {
+        background-color: darkgreen;
+    }
+
+</style>
+<body>
+    <div class="top-bar">
+    <button onclick="showAlert()">Light</button>
+    <button onclick ="ToggleDarkMode()">Dark</button>
+    </div>
+    <button class="back" onclick="window.location.href='index2.html';" style="text-decoration: none; background-color: none;">Back</button>
+
+    <div class="calculator">
+        <input type="number" id="num1" placeholder="First number">
+        <input type="number" id="num2" placeholder="Second number">
+
+        <button onclick="calculate('+')">+</button>
+         <button onclick="calculate('-')">-</button>
+          <button onclick="calculate('*')">x</button>
+           <button onclick="calculate('/')">/</button>
+    </div>
+
+    <h4 id="result">Result</h4>
+
+    <script>
+function showAlert() {
+    alert("Light mode activated!");
+}
+function ToggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+function calculate(operator) {
+    const num1 = Number(document.getElementById('num1').value);
+    const num2 = Number(document.getElementById('num2').value);
+    let result;
+
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("Please enter valid numbers.");
+    }else {
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 === 0) {
+                    alert("Cannot divide by zero.");
+                    return;
+                }
+                result = num1 / num2;
+                break;
+        }
+        document.getElementById('result').textContent = `Result: ${result}`;
+    }
+}
+    </script>
+</body>
+</html>

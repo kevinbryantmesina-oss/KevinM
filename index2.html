@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            color: #222;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: green;
+            padding: 16px 40px;
+            color: white;
+        }
+
+        .navbar .logo {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+            font-style: italic;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #d7f7d2;
+        }
+
+        .nav-links a.hover{
+            color: black;
+        }
+
+        .dashboard {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 24px 40px;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .dashboard-header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .dashboard-header p {
+            margin: 0;
+            color: #555;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #1a7f34;
+        }
+
+        .card .count {
+            font-size: 44px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .card p {
+            margin: 12px 0 0;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .card .status {
+            margin-top: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #1a7f34;
+            font-weight: 600;
+        }
+
+        .upload-summary {
+            margin-top: 32px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 20px;
+        }
+
+        .upload-summary .summary-box {
+            background: white;
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+        }
+
+        .upload-summary .summary-box h3 {
+            margin-top: 0;
+            color: #1a7f34;
+        }
+
+        .upload-summary .summary-box ul {
+            padding-left: 20px;
+            margin: 16px 0 0;
+            color: #555;
+        }
+
+        .upload-summary .summary-box li {
+            margin-bottom: 10px;
+        }
+
+         .quiz {
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        background: green;
+        color: black;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .quiz:hover {
+        background: white;
+    }
+
+    /* Image Viewer */
+    .viewer {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .viewer img {
+        max-width: 80%;
+        max-height: 80%;
+        border-radius: 10px;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .Lab{
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        background: green;
+        color: black;
+        cursor: pointer;
+        border-radius: 5px;
+        left: 400px;
+        position: absolute;
+    }
+
+    .Lab:hover {
+        background: white;
+    }
+
+    .calculator{
+        position: absolute;
+        left: 480px;
+        bottom: 182px;
+        padding: 10px 15px;
+        background-color: green;
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .calculator:hover {
+        background-color: rgb(255, 255, 255);
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h2 class="logo">Dashboard</h2>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index2.html">Dashboard</a></li>
+            <li><a href="index3.html">Upload</a></li>
+        </ul>
+    </nav>
+
+    <main class="dashboard">
+        <div class="dashboard-header">
+            <div>
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <h2>Quizzes</h2>
+                <p class="count">3</p>
+                <p>Completed quizzes with performance tracking.</p>
+                <p class="status">In progress</p>
+            </div>
+
+            <div class="card">
+                <h2>Lab Activity</h2>
+                <p class="count">2</p>
+                <p>Lab tasks submitted and pending review.</p>
+                <p class="status">In progress</p>
+            </div>
+
+            <div class="card">
+                <h2>Major Exam</h2>
+                <p class="count">0</p>
+                <p>Upcoming major exam details and preparation status.</p>
+                <p class="status">In progress</p> 
+            </div>
+
+            <div class="card">
+                <h2>Uploads</h2>
+                <p class="count">4</p>
+                <p>Total number of uploads made for quizzes, labs, and exams.</p>
+                <p class="status">No upload yet</p>
+            </div>
+        </div>
+
+        
+<button class="quiz" onclick="openImage('quiz 1.jpg')">Quiz 1</button>
+<button class="quiz" onclick="openImage('quiz 2.jpg')">Quiz 2</button>
+<button class="quiz" onclick="openImage('quiz 3.jpg')">Quiz 3</button>
+
+
+<button class="Lab" onclick="openImage('Lab.jpg')">Lab</button>
+<button class="calculator" onclick="window.location.href='index4.html';" style="text-decoration: none; background-color: none;">Calculator</button>
+<div class="viewer" id="viewer">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img id="viewImg" src="">
+</div>
+
+<script>
+function openImage(src) {
+    document.getElementById("viewer").style.display = "flex";
+    document.getElementById("viewImg").src = src;
+}
+
+function closeImage() {
+    document.getElementById("viewer").style.display = "none";
+}
+</script>
+        </div>
+   </main>
+</body>
+</html>
